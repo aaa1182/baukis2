@@ -10,8 +10,7 @@ describe String do
 
     example "nilは追加できない" do
       s = "ABC"
-      s << nil
-      expect(s.size).to eq(4)
+      expect { s << nil }.to raise_error(TypeError)
     end
   end
 
